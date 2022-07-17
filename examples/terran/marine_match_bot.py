@@ -9,7 +9,7 @@ from marine_helper_funcs import *
 
 
 class MarineBot(BotAI):
-    def __init__(self, max_allocation, result=None, history_dict=None, run_index=None, meta_meta_run_number=None):
+    def __init__(self, max_allocation, result: list = None, history_dict=None, run_index=None, meta_meta_run_number=None):
         super(MarineBot, self).__init__()
         self.event_dict = {
             'pre_started' : asyncio.Event(),
