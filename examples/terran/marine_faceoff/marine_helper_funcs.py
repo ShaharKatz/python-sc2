@@ -19,7 +19,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.utils import plot_model
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
+sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
 
 import numpy as np
 

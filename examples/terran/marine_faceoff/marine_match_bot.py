@@ -1,11 +1,11 @@
 import os
 import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
+sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
 
 # https://www.youtube.com/watch?v=1-QtVxce44k&ab_channel=Altercate
 
-from marine_helper_funcs import *
+from examples.terran.marine_faceoff.marine_helper_funcs import *
 
 
 class MarineBot(BotAI):
