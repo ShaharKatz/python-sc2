@@ -209,14 +209,14 @@ def create_q_model():
     # Network defined by the Deepmind paper
     inputs = layers.Input(shape=(16, 1, 1,))
     num_friendly_marines = 8
-    num_eneymy_marines = 8
-    num_actions = num_friendly_marines * num_eneymy_marines
+    num_enemy_marines = 8
+    num_actions = num_friendly_marines * num_enemy_marines
 
     # Convolutions on the frames on the screen
     layer1 = layers.Flatten()(inputs)
     layer2 = layers.Dense(64, activation="relu")(layer1)
     layer3 = layers.Dense(num_actions, activation="relu")(layer2)
-    layer4 = layers.Reshape((num_friendly_marines, num_eneymy_marines, 1))(layer3)
+    layer4 = layers.Reshape((num_friendly_marines, num_enemy_marines, 1))(layer3)
     action = layers.Softmax(axis=1)(layer4)
 
     return keras.Model(inputs=inputs, outputs=action)
